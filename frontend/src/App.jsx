@@ -297,9 +297,21 @@ export default function App() {
           </>
         )}
       </main>
-      <footer>
-        <span>Aprende Jugando</span>
-        <span>Un pequeño reto. Un nuevo aprendizaje.</span>
+            <footer className="site-footer">
+        <div className="footer-summary">
+          <span>Aprende Jugando</span>
+          <span>Un pequeño reto. Un nuevo aprendizaje.</span>
+        </div>
+
+        {view === "games" && !game && (
+          <ul className="team-names" aria-label="Integrantes del grupo">
+            <li>Diego Xavier Bartolón Gutierrez</li>
+            <li>Rony Rosbelí de León Gómez</li>
+            <li>Julio Emmanuel Fuentes Cifuentes</li>
+            <li>Robin Daniel Meoño Ochoa</li>
+            <li>Hugo Jeferson Ochoa Rosales</li>
+          </ul>
+        )}
       </footer>
     </>
   );
